@@ -1,10 +1,12 @@
 const { MongoClient } = require("mongodb");
 require("dotenv").config();
-const mongoUSER = process.env.mongoPASSWORD;
+
+const mongoUSER = process.env.mongoUSER;
 const mongoPASSWORD = process.env.mongoPASSWORD;
 
+
 let dbConnection;
-let uri = `mongodb+srv://Out-A-Time:${mongoPASSWORD}@mongodb-cluster0.99qmncj.mongodb.net/?retryWrites=true&w=majority`;
+let uri = `mongodb+srv://${mongoUSER}:${mongoPASSWORD}@mongodb-cluster0.99qmncj.mongodb.net/?retryWrites=true&w=majority`;
 // let uri ="mongodb+srv://Out-A-Time:xxx@mongodb-cluster0.99qmncj.mongodb.net/?retryWrites=true&w=majority";
 
 module.exports = {
